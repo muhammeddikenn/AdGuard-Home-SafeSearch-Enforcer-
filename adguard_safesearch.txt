@@ -1,13 +1,46 @@
 ! --- Enforced SafeSearch Engines ---
 |search.brave.com^$dnsrewrite=NOERROR;CNAME;forcesafe.search.brave.com
 ||google.*^$dnsrewrite=NOERROR;CNAME;forcesafesearch.google.com
+||google.com^$dnsrewrite=NOERROR;CNAME;forcesafesearch.google.com
+||www.google.com^$dnsrewrite=NOERROR;CNAME;forcesafesearch.google.com
+||google.com.tr^$dnsrewrite=NOERROR;CNAME;forcesafesearch.google.com
+||www.google.com.tr^$dnsrewrite=NOERROR;CNAME;forcesafesearch.google.com
 ||bing.com^$dnsrewrite=NOERROR;CNAME;strict.bing.com
 ||duckduckgo.com^$dnsrewrite=NOERROR;CNAME;safe.duckduckgo.com
 ||yandex.com.tr^$dnsrewrite=NOERROR;CNAME;familysearch.yandex.ru
 ||yandex.com^$dnsrewrite=NOERROR;CNAME;familysearch.yandex.ru
 ||yandex.ru^$dnsrewrite=NOERROR;CNAME;familysearch.yandex.ru
 ||ya.ru^$dnsrewrite=NOERROR;CNAME;familysearch.yandex.ru
+||pixabay.com^$dnsrewrite=NOERROR;CNAME;safesearch.pixabay.com
 
-! --- Blocked Unsupported Engines ---
-||search.yahoo.com^$important
-||baidu.com^$important
+! --- Blocked Alternative & Privacy Search Engines (No DNS SafeSearch) ---
+||startpage.com^$important
+||qwant.com^$important
+||ecosia.org^$important
+||swisscows.com^$important
+||mojeek.com^$important
+||metager.org^$important
+||gibiru.com^$important
+||presearch.com^$important
+||kagi.com^$important
+||search.aol.com^$important
+||ask.com^$important
+||dogpile.com^$important
+||lycos.com^$important
+||info.com^$important
+||webcrawler.com^$important
+
+! --- Blocked Regional Search Engines ---
+||sogou.com^$important
+||so.com^$important
+||search.naver.com^$important
+||search.daum.net^$important
+||search.seznam.cz^$important
+||search.yahoo.co.jp^$important
+||search.goo.ne.jp^$important
+||go.mail.ru^$important
+||nova.rambler.ru^$important
+
+! --- Blocked Meta-Search / Proxy Interfaces ---
+||searx.be^$important
+||searx.space^$important
