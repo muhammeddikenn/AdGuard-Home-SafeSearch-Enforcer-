@@ -1,17 +1,17 @@
 ! --- Enforced SafeSearch Engines ---
 |search.brave.com^$dnsrewrite=NOERROR;CNAME;forcesafe.search.brave.com
-||google.*^$dnsrewrite=NOERROR;CNAME;forcesafesearch.google.com
-||google.com^$dnsrewrite=NOERROR;CNAME;forcesafesearch.google.com
-||www.google.com^$dnsrewrite=NOERROR;CNAME;forcesafesearch.google.com
-||google.com.tr^$dnsrewrite=NOERROR;CNAME;forcesafesearch.google.com
-||www.google.com.tr^$dnsrewrite=NOERROR;CNAME;forcesafesearch.google.com
-||bing.com^$dnsrewrite=NOERROR;CNAME;strict.bing.com
-||duckduckgo.com^$dnsrewrite=NOERROR;CNAME;safe.duckduckgo.com
-||yandex.com.tr^$dnsrewrite=NOERROR;CNAME;familysearch.yandex.ru
-||yandex.com^$dnsrewrite=NOERROR;CNAME;familysearch.yandex.ru
-||yandex.ru^$dnsrewrite=NOERROR;CNAME;familysearch.yandex.ru
-||ya.ru^$dnsrewrite=NOERROR;CNAME;familysearch.yandex.ru
-||pixabay.com^$dnsrewrite=NOERROR;CNAME;safesearch.pixabay.com
+|google.com^$dnsrewrite=NOERROR;CNAME;forcesafesearch.google.com
+|www.google.com^$dnsrewrite=NOERROR;CNAME;forcesafesearch.google.com
+|google.com.tr^$dnsrewrite=NOERROR;CNAME;forcesafesearch.google.com
+|www.google.com.tr^$dnsrewrite=NOERROR;CNAME;forcesafesearch.google.com
+|bing.com^$dnsrewrite=NOERROR;CNAME;strict.bing.com
+|www.bing.com^$dnsrewrite=NOERROR;CNAME;strict.bing.com
+|duckduckgo.com^$dnsrewrite=NOERROR;CNAME;safe.duckduckgo.com
+|yandex.com.tr^$dnsrewrite=NOERROR;CNAME;familysearch.yandex.ru
+|yandex.com^$dnsrewrite=NOERROR;CNAME;familysearch.yandex.ru
+|yandex.ru^$dnsrewrite=NOERROR;CNAME;familysearch.yandex.ru
+|ya.ru^$dnsrewrite=NOERROR;CNAME;familysearch.yandex.ru
+|pixabay.com^$dnsrewrite=NOERROR;CNAME;safesearch.pixabay.com
 
 ! --- Blocked Alternative & Privacy Search Engines (No DNS SafeSearch) ---
 ||startpage.com^$important
