@@ -31,6 +31,8 @@
 ||webcrawler.com^$important
 ||baidu.com^$important
 ||yahoo.com^$important
+||perplexity.ai^
+
 
 ! --- Blocked Regional Search Engines ---
 ||sogou.com^$important
