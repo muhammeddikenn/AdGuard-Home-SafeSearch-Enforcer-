@@ -1,1 +1,4 @@
-|search.brave.com^$dnsrewrite=NOERROR;CNAME;forcesafe.search.brave.com
+*Brave:* |search.brave.com^$dnsrewrite=NOERROR;CNAME;forcesafe.search.brave.com
+*Google:* |google.com^$dnsrewrite=NOERROR;CNAME;forcesafesearch.google.com
+*Bing:* |bing.com^$dnsrewrite=NOERROR;CNAME;strict.bing.com
+*Duckduckgo:* |duckduckgo.com^$dnsrewrite=NOERROR;CNAME;safe.duckduckgo.com
