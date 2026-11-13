@@ -30,6 +30,7 @@
 ||info.com^$important
 ||webcrawler.com^$important
 ||baidu.com^$important
+||yahoo.com^$important
 
 ! --- Blocked Regional Search Engines ---
 ||sogou.com^$important
