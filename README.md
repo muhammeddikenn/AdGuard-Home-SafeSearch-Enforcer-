@@ -1,14 +1,16 @@
 # AdGuard Home SafeSearch Enforcer 🛡️
 
-A comprehensive filter list for **AdGuard Home** designed to automatically enforce **SafeSearch** across all major search engines using advanced DNS rewrite rules. Perfect for protecting families and children from explicit content network-wide.
+A comprehensive and growing filter list for **AdGuard Home** designed to automatically enforce **SafeSearch** across a wide variety of search engines using advanced DNS rewrite rules. Perfect for protecting families and children from explicit content network-wide.
 
 ## 🚀 Supported Search Engines
+This list currently enforces SafeSearch on the following search engines (and is continuously expanding):
+
 * **Google**
-* **YouTube** (Restricted Mode)
 * **Bing**
 * **Yandex**
 * **DuckDuckGo**
 * **Brave Search**
+* *And more coming soon...*
 
 ---
 
