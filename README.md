@@ -1,23 +1,32 @@
 # AdGuard Home SafeSearch Enforcer 🛡️
 
-A comprehensive and growing filter list for AdGuard Home designed to automatically enforce SafeSearch across major search engines using DNS rewrite rules. Ideal for protecting families, schools, and children from explicit content network-wide.
+A comprehensive, strict, and actively maintained filter list for AdGuard Home designed to enforce SafeSearch across major search engines using DNS rewrite rules—**and completely block unsupported search engines** that lack DNS-level SafeSearch capabilities to prevent filter bypassing. Ideal for protecting families, schools, and networks from explicit content.
 
-## 🚀 Supported Search Engines
+## 🔒 How It Works (Zero-Bypass Policy)
 
-This list currently enforces SafeSearch on the following search engines:
+1. **Supported Engines (Enforced):** Queries are automatically rewritten via CNAME to the engine's official SafeSearch endpoint.
+2. **Unsupported Engines (Blocked):** Search engines that rely solely on browser cookies or account settings (such as Baidu or Yahoo) are blocked at the DNS level so users cannot bypass network-wide filtering.
 
-- **Google** (`forcesafesearch.google.com`)
-- **Bing** (`strict.bing.com`)
-- **Yandex** (`familysearch.yandex.ru` / `.com`)
-- **DuckDuckGo** (`safe.duckduckgo.com`)
-- **Brave Search** (`forcesafe.search.brave.com`)
-- **Pixabay** (`safesearch.pixabay.com`) *(Opsiyonel - listenizde varsa ekleyebilirsiniz)*
+## 🚀 Search Engine Coverage
 
-> **Note on Unsupported Engines (e.g., Baidu, Yahoo):** Some search engines do not provide a dedicated SafeSearch CNAME endpoint and rely solely on browser cookies or account settings. Therefore, they cannot be enforced via DNS rewrite rules.
+This repository is continuously expanding. Below is the current status of supported and blocked search engines:
+
+| Search Engine | Policy / Status | Action / CNAME Endpoint |
+| :--- | :---: | :--- |
+| **Google** | ✅ SafeSearch Enforced | `forcesafesearch.google.com` |
+| **Bing** | ✅ SafeSearch Enforced | `strict.bing.com` |
+| **Yandex** | ✅ SafeSearch Enforced | `familysearch.yandex.ru` / `.com` |
+| **DuckDuckGo** | ✅ SafeSearch Enforced | `safe.duckduckgo.com` |
+| **Brave Search** | ✅ SafeSearch Enforced | `forcesafe.search.brave.com` |
+| **Pixabay** | 🚧 Planned (Enforce) | `safesearch.pixabay.com` |
+| **YouTube (Restricted)** | 🚧 Planned (Enforce) | `restrict.youtube.com` |
+| **Baidu** | 🚫 Blocked (No DNS SafeSearch) | Domain blocked (`\|\|baidu.com^`) |
+| **Yahoo Search** | 🚫 Blocked (No DNS SafeSearch) | Domain blocked (`\|\|search.yahoo.com^`) |
+| **Others (Startpage, Qwant, etc.)** | 🔄 Investigating | *Enforce if supported, otherwise block* |
 
 ## 📥 How to Use
 
-You can add this list to your AdGuard Home instance as a custom DNS blocklist:
+You can easily add this list to your AdGuard Home instance as a custom filtering list:
 
 1. Copy the **Raw** link of the `adguard_safesearch.txt` file from this repository.
 2. Open your **AdGuard Home** administration panel.
@@ -27,8 +36,12 @@ You can add this list to your AdGuard Home instance as a custom DNS blocklist:
 
 ## 📋 Rule Syntax & Examples
 
-This repository uses AdGuard Home's `$dnsrewrite` modifier syntax instead of standard hosts formatting:
+This list uses AdGuard Home's native `$dnsrewrite` and domain blocking filter syntax:
 
 ```text
-# Example SafeSearch DNS Rewrite Rule
+# Enforce SafeSearch via DNS Rewrite
 ||search.brave.com^$dnsrewrite=NOERROR;CNAME;forcesafe.search.brave.com
+
+# Block Search Engines Without DNS SafeSearch Support
+||baidu.com^
+||search.yahoo.com^
