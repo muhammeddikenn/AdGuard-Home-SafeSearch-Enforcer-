@@ -29,6 +29,7 @@
 ||lycos.com^$important
 ||info.com^$important
 ||webcrawler.com^$important
+||baidu.com^$important
 
 ! --- Blocked Regional Search Engines ---
 ||sogou.com^$important
