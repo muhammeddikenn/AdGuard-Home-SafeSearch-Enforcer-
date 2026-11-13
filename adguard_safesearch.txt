@@ -1,4 +1,13 @@
-*Brave:* |search.brave.com^$dnsrewrite=NOERROR;CNAME;forcesafe.search.brave.com
-*Google:* |google.com^$dnsrewrite=NOERROR;CNAME;forcesafesearch.google.com
-*Bing:* |bing.com^$dnsrewrite=NOERROR;CNAME;strict.bing.com
-*Duckduckgo:* |duckduckgo.com^$dnsrewrite=NOERROR;CNAME;safe.duckduckgo.com
+! --- Enforced SafeSearch Engines ---
+|search.brave.com^$dnsrewrite=NOERROR;CNAME;forcesafe.search.brave.com
+||google.*^$dnsrewrite=NOERROR;CNAME;forcesafesearch.google.com
+||bing.com^$dnsrewrite=NOERROR;CNAME;strict.bing.com
+||duckduckgo.com^$dnsrewrite=NOERROR;CNAME;safe.duckduckgo.com
+||yandex.com.tr^$dnsrewrite=NOERROR;CNAME;familysearch.yandex.ru
+||yandex.com^$dnsrewrite=NOERROR;CNAME;familysearch.yandex.ru
+||yandex.ru^$dnsrewrite=NOERROR;CNAME;familysearch.yandex.ru
+||ya.ru^$dnsrewrite=NOERROR;CNAME;familysearch.yandex.ru
+
+! --- Blocked Unsupported Engines ---
+||search.yahoo.com^$important
+||baidu.com^$important
