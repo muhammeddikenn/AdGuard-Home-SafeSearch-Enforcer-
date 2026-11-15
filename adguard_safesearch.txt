@@ -12,7 +12,6 @@
 |yandex.ru^$dnsrewrite=NOERROR;CNAME;familysearch.yandex.ru
 |ya.ru^$dnsrewrite=NOERROR;CNAME;familysearch.yandex.ru
 |pixabay.com^$dnsrewrite=NOERROR;CNAME;safesearch.pixabay.com
-|corntube.com^$dnsrewrite=NOERROR;CNAME;claude.ai/artifact/8YXzQZBzFyiHha5A5pTvNK
 
 ! --- Blocked Alternative & Privacy Search Engines (No DNS SafeSearch) ---
 ||startpage.com^$important
