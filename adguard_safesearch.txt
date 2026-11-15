@@ -32,7 +32,6 @@
 ||yahoo.com^$important
 ||perplexity.ai^
 
-
 ! --- Blocked Regional Search Engines ---
 ||sogou.com^$important
 ||so.com^$important
